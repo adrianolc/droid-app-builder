@@ -7,6 +7,8 @@ ext {
     test_ext_version    = "1.1.1"
     espresso_version    = "3.2.0"
 
+    material_version    = "1.2.1"
+
     libraries = [
             kotlin              : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
 
@@ -15,7 +17,9 @@ ext {
             koin_viewmodel      : "org.koin:koin-android-viewmodel:$koin_version",
 
             androidx_core       : "androidx.core:core-ktx:$androidx_version",
-            androidx_appcompat  : "androidx.appcompat:appcompat:$androidx_version"
+            androidx_appcompat  : "androidx.appcompat:appcompat:$androidx_version",
+
+            google_material     : "com.google.android.material:material:$material_version",
     ]
 
     test_libraries = [

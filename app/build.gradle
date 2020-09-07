@@ -36,6 +36,8 @@ dependencies {
     implementation libraries.androidx_core
     implementation libraries.androidx_appcompat
 
+    implementation libraries.google_material
+
     testImplementation test_libraries.junit
     androidTestImplementation test_libraries.androidx_test_ext
     androidTestImplementation test_libraries.espresso
