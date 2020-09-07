@@ -1,11 +1,18 @@
 ext {
+    koin_version = '2.1.6'
+
     androidx_version    = "1.1.0"
+
     junit_version       = "4.12"
     test_ext_version    = "1.1.1"
     espresso_version    = "3.2.0"
 
     libraries = [
             kotlin              : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+
+            koin_core           : "org.koin:koin-core:$koin_version",
+            koin_android        : "org.koin:koin-android:$koin_version",
+            koin_viewmodel      : "org.koin:koin-android-viewmodel:$koin_version",
 
             androidx_core       : "androidx.core:core-ktx:$androidx_version",
             androidx_appcompat  : "androidx.appcompat:appcompat:$androidx_version"

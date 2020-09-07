@@ -29,6 +29,10 @@ dependencies {
     project(':domain')
 
     implementation libraries.kotlin
+
+    implementation libraries.koin_core
+    implementation libraries.koin_viewmodel
+
     implementation libraries.androidx_core
     implementation libraries.androidx_appcompat
 

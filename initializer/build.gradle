@@ -29,4 +29,6 @@ dependencies {
     project(':data')
 
     implementation libraries.kotlin
+
+    implementation libraries.koin_android
 }

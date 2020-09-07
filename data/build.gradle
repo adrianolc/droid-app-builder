@@ -4,6 +4,8 @@ apply plugin: 'kotlin'
 
 dependencies {
     implementation libraries.kotlin
+
+    implementation libraries.koin_core
 }
 
 sourceCompatibility = "1.8"
