@@ -7,12 +7,12 @@ import adrianolc.appbuilder.model.Branch
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class LoadBranchUseCase internal constructor(
+class LoadBranchesUseCase internal constructor(
     private val branchRepository: BranchRepository
 ) {
-    suspend operator fun invoke(): Result<List<Branch>> {
+    suspend operator fun invoke(page: Int): Result<List<Branch>> {
         return withContext(Dispatchers.IO) {
-            executeToResult { branchRepository.loadBranches() }
+            executeToResult { branchRepository.loadBranches(page) }
         }
     }
 }
