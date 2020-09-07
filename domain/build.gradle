@@ -6,6 +6,7 @@ dependencies {
     implementation project(':model')
 
     implementation libraries.kotlin
+    implementation libraries.kotlin_coroutines
 
     implementation libraries.koin_core
 }

@@ -4,7 +4,7 @@ import adrianolc.appbuilder.model.Branch
 
 interface BranchRepository {
 
-    fun loadBranches(): List<Branch>
+    suspend fun loadBranches(): List<Branch>
 
-    fun getBranch(name: String): Branch
+    suspend fun getBranch(name: String): Branch
 }
