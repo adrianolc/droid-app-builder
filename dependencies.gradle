@@ -1,0 +1,19 @@
+ext {
+    androidx_version    = "1.1.0"
+    junit_version       = "4.12"
+    test_ext_version    = "1.1.1"
+    espresso_version    = "3.2.0"
+
+    libraries = [
+            kotlin              : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+
+            androidx_core       : "androidx.core:core-ktx:$androidx_version",
+            androidx_appcompat  : "androidx.appcompat:appcompat:$androidx_version"
+    ]
+
+    test_libraries = [
+            junit               : "junit:junit:$junit_version",
+            androidx_test_ext   : "androidx.test.ext:junit:$test_ext_version",
+            espresso            : "androidx.test.espresso:espresso-core:$espresso_version"
+    ]
+}
