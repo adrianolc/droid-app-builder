@@ -25,8 +25,8 @@ android {
 }
 
 dependencies {
-    project(':domain')
-    project(':data')
+    implementation project(':domain')
+    implementation project(':data')
 
     implementation libraries.kotlin
 
