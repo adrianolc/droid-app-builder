@@ -1,5 +1,6 @@
 package adrianolc.appbuilder.injector
 
+import adrianolc.appbuilder.data.di.dataModules
 import adrianolc.appbuilder.domain.di.domainModules
 import android.app.Application
 import android.content.ContentProvider
@@ -20,6 +21,7 @@ class InitializeProvider : ContentProvider() {
             androidContext(application)
 
             modules(domainModules)
+            modules(dataModules)
         }
 
         return true
