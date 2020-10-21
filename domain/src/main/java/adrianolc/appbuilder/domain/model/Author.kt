@@ -1,4 +1,4 @@
-package adrianolc.appbuilder.model
+package adrianolc.appbuilder.domain.model
 
 data class Author(
     val name: String

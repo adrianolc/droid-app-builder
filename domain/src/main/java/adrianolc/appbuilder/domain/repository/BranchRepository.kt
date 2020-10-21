@@ -1,6 +1,6 @@
 package adrianolc.appbuilder.domain.repository
 
-import adrianolc.appbuilder.model.Branch
+import adrianolc.appbuilder.domain.model.Branch
 
 interface BranchRepository {
 

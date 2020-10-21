@@ -4,7 +4,7 @@ import adrianolc.appbuilder.domain.DomainDispatchers
 import adrianolc.appbuilder.domain.Result
 import adrianolc.appbuilder.domain.executeToResult
 import adrianolc.appbuilder.domain.repository.TagRepository
-import adrianolc.appbuilder.model.Tag
+import adrianolc.appbuilder.domain.model.Tag
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

@@ -4,7 +4,7 @@ import adrianolc.appbuilder.domain.DomainDispatchers
 import adrianolc.appbuilder.domain.Result
 import adrianolc.appbuilder.domain.executeToResult
 import adrianolc.appbuilder.domain.repository.BranchRepository
-import adrianolc.appbuilder.model.Branch
+import adrianolc.appbuilder.domain.model.Branch
 import kotlinx.coroutines.withContext
 
 class LoadBranchesUseCase internal constructor(

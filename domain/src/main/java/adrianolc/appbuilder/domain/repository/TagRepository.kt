@@ -1,6 +1,6 @@
 package adrianolc.appbuilder.domain.repository
 
-import adrianolc.appbuilder.model.Tag
+import adrianolc.appbuilder.domain.model.Tag
 
 interface TagRepository {
 
