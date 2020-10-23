@@ -8,7 +8,7 @@ import org.koin.dsl.module
 
 private val repositories = module {
     single<BranchRepository> {
-        BranchRepositoryImpl()
+        BranchRepositoryImpl(get())
     }
 
     single<TagRepository> {
