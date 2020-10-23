@@ -8,6 +8,10 @@ dependencies {
     implementation libraries.kotlin
 
     implementation libraries.koin_core
+
+    implementation libraries.fuel
+    implementation libraries.fuel_coroutines
+    implementation libraries.fuel_serialization
 }
 
 sourceCompatibility = "1.8"
