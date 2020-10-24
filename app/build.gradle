@@ -23,6 +23,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -35,6 +39,10 @@ dependencies {
 
     implementation libraries.androidx_core
     implementation libraries.androidx_appcompat
+    implementation libraries.androidx_layout
+    implementation libraries.androix_viewmodel
+    implementation libraries.androidx_lifecycle
+    implementation libraries.androidx_liveData
 
     implementation libraries.google_material
 
