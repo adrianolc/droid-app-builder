@@ -1,7 +1,6 @@
 apply from: "$rootProject.projectDir/dependencies.gradle"
 apply plugin: 'java-library'
 apply plugin: 'kotlin'
-apply plugin: 'kotlinx-serialization'
 
 dependencies {
     implementation project(":domain")
@@ -10,11 +9,10 @@ dependencies {
 
     implementation libraries.koin_core
 
-    api libraries.fuel
-    implementation libraries.fuel_coroutines
-    implementation libraries.fuel_serialization
+    implementation libraries.retrofit
+    implementation libraries.converter_moshi
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.0")
+    implementation libraries.logging_interceptor
 }
 
 sourceCompatibility = "1.8"

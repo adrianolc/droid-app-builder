@@ -1,6 +1,5 @@
 package adrianolc.appbuilder.data.di
 
-import adrianolc.appbuilder.data.remote.data_source.BranchDataSource
 import adrianolc.appbuilder.data.repository.BranchRepositoryImpl
 import adrianolc.appbuilder.data.repository.TagRepositoryImpl
 import adrianolc.appbuilder.domain.repository.BranchRepository
@@ -17,13 +16,7 @@ private val repositories = module {
     }
 }
 
-private val dataSources = module {
-    factory {
-        BranchDataSource()
-    }
-}
-
 val dataModules = listOf(
     repositories,
-    dataSources
+    network
 )
