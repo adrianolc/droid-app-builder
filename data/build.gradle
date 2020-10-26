@@ -10,7 +10,7 @@ dependencies {
 
     implementation libraries.koin_core
 
-    implementation libraries.fuel
+    api libraries.fuel
     implementation libraries.fuel_coroutines
     implementation libraries.fuel_serialization
 

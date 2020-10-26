@@ -5,7 +5,7 @@ import adrianolc.appbuilder.data.remote.dto.Branch
 
 class BranchDataSource {
 
-    suspend fun getBranches(page: Int): List<Branch> {
+    suspend fun getBranches(page: Int): Array<Branch> {
         return executeHttpGet(
             path = "/repo/branches",
             params = listOf(
