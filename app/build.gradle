@@ -1,4 +1,4 @@
-apply from: '/dependencies.gradle'
+apply from: "$rootProject.projectDir/dependencies.gradle"
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
