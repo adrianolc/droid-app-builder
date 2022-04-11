@@ -15,7 +15,7 @@ ext {
     fuel_version        = "2.3.0"
 
     retrofit_version    = "2.9.0"
-    converter_version   = "2.4.0"
+    converter_version   = "2.9.0"
 
     logging_version     = "3.1.0"
 
