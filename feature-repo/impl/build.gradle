@@ -27,9 +27,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
+    implementation project(':domain')
 
     implementation libraries.koin_core
     implementation libraries.koin_viewmodel

@@ -1,8 +1,6 @@
-package adrianolc.appbuilder.app.feature.repo
+package adrianolc.appbuilder.feature_repo.impl.ui
 
-import adrianolc.appbuilder.databinding.ListActivityBinding
-import android.content.Context
-import android.content.Intent
+import adrianolc.appbuilder.feature_repo.impl.databinding.ListActivityBinding
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -25,13 +23,6 @@ class ListActivity : AppCompatActivity() {
     private fun setObservables() = with(viewModel){
         branches.observe(this@ListActivity) {
 
-        }
-    }
-
-    companion object {
-
-        fun newIntent(context: Context): Intent {
-            return Intent(context, ListActivity::class.java)
         }
     }
 }

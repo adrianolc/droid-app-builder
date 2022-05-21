@@ -1,6 +1,6 @@
 package adrianolc.appbuilder.app.feature.splash_screen
 
-import adrianolc.appbuilder.app.feature.repo.ListActivity
+import adrianolc.appbuilder.feature_repo.impl.ListActivity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -17,7 +17,7 @@ class SplashScreenActivity : AppCompatActivity() {
             delay(1000)
 
             startActivity(
-                ListActivity.newIntent(this@SplashScreenActivity)
+                adrianolc.appbuilder.feature_repo.impl.ListActivity.newIntent(this@SplashScreenActivity)
             )
         }
     }

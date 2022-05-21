@@ -1,4 +1,4 @@
-package adrianolc.appbuilder.domain.use_case.branch
+package adrianolc.appbuilder.feature_repo.impl.domain.use_case
 
 import adrianolc.appbuilder.domain.DomainDispatchers
 import adrianolc.appbuilder.domain.Result
