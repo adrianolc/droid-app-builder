@@ -39,7 +39,7 @@ dependencies {
     implementation project(':domain')
 
     implementation project(':feature-repo:api')
-    implementation project(':feature-repo:repo')
+    implementation project(':feature-repo:impl')
 
     implementation libraries.kotlin
 
