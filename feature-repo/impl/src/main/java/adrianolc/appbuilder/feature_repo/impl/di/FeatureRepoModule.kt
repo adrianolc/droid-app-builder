@@ -1,6 +1,7 @@
 package adrianolc.appbuilder.feature_repo.impl.di
 
 import adrianolc.appbuilder.feature_repo.impl.FeatureRepoNavigationImpl
+import adrianolc.appbuilder.feature_repo.impl.domain.use_case.LoadBranchesUseCase
 import adrianolc.appbuilder.feature_repo.impl.ui.ListViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -13,7 +14,14 @@ private val navigation = module {
     factory { FeatureRepoNavigationImpl() }
 }
 
+private val useCases = module {
+    factory {
+        LoadBranchesUseCase(get(), get())
+    }
+}
+
 val featureRepoModule = listOf(
     viewModels,
-    navigation
+    navigation,
+    useCases
 )
