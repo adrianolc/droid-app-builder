@@ -38,6 +38,9 @@ dependencies {
     implementation project(':initializer')
     implementation project(':domain')
 
+    implementation project(':feature-repo:api')
+    implementation project(':feature-repo:repo')
+
     implementation libraries.kotlin
 
     implementation libraries.koin_core
