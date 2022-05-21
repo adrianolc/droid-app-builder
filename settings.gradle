@@ -5,3 +5,4 @@ include ':domain'
 include ':app'
 rootProject.name = "App Builder"
 include ':feature-repo:impl'
+include ':feature-repo:api'
