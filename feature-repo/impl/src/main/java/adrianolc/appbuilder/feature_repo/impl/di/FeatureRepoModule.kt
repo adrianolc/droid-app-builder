@@ -1,5 +1,6 @@
 package adrianolc.appbuilder.feature_repo.impl.di
 
+import adrianolc.appbuilder.feature_repo.api.FeatureRepoNavigation
 import adrianolc.appbuilder.feature_repo.impl.FeatureRepoNavigationImpl
 import adrianolc.appbuilder.feature_repo.impl.domain.use_case.LoadBranchesUseCase
 import adrianolc.appbuilder.feature_repo.impl.ui.ListViewModel
@@ -11,7 +12,7 @@ private val viewModels = module {
 }
 
 private val navigation = module {
-    factory { FeatureRepoNavigationImpl() }
+    factory<FeatureRepoNavigation> { FeatureRepoNavigationImpl() }
 }
 
 private val useCases = module {
