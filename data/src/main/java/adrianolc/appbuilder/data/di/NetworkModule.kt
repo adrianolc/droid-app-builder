@@ -44,7 +44,6 @@ private fun okHttpClient(): OkHttpClient {
 
 private fun loggingInterceptor(): LoggingInterceptor {
     return LoggingInterceptor.Builder()
-        .loggable(true)
         .setLevel(Level.BASIC)
         .log(Platform.INFO)
         .request("Request")

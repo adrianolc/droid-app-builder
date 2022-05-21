@@ -14,7 +14,7 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         lifecycleScope.launch {
-            delay(200)
+            delay(1000)
 
             startActivity(
                 ListActivity.newIntent(this@SplashScreenActivity)
