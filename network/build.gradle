@@ -3,13 +3,10 @@ apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    implementation project(":domain")
-    implementation project(':network')
-
     implementation libraries.koin_core
 
-    implementation libraries.retrofit
-    implementation libraries.converter_moshi
+    api libraries.retrofit
+    api libraries.converter_moshi
 
     implementation libraries.logging_interceptor
 }

@@ -1,6 +1,13 @@
+rootProject.name = "App Builder"
+
 include ':model'
 include ':initializer'
 include ':data'
 include ':domain'
 include ':app'
-rootProject.name = "App Builder"
+
+include ':feature-branches:impl'
+include ':feature-branches:api'
+include ':network'
+include ':remote:api'
+include ':remote:impl'

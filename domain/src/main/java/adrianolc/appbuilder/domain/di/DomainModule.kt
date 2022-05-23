@@ -2,7 +2,6 @@ package adrianolc.appbuilder.domain.di
 
 import adrianolc.appbuilder.domain.DomainDispatchers
 import adrianolc.appbuilder.domain.use_case.branch.GetBranchUseCase
-import adrianolc.appbuilder.domain.use_case.branch.LoadBranchesUseCase
 import adrianolc.appbuilder.domain.use_case.tag.GetTagUseCase
 import adrianolc.appbuilder.domain.use_case.tag.LoadTagsUseCase
 import kotlinx.coroutines.CoroutineDispatcher
@@ -10,10 +9,6 @@ import kotlinx.coroutines.Dispatchers
 import org.koin.dsl.module
 
 private val useCases = module {
-    factory {
-        LoadBranchesUseCase(get(), get())
-    }
-
     factory {
         GetBranchUseCase(get(), get())
     }

@@ -5,6 +5,7 @@ apply plugin: 'kotlin'
 dependencies {
     implementation project(":domain")
     implementation project(':network')
+    implementation project(':remote:api')
 
     implementation libraries.koin_core
 

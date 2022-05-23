@@ -1,20 +1,17 @@
-apply from: "$rootProject.projectDir/dependencies.gradle"
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
 
 android {
-    compileSdkVersion 32
-    buildToolsVersion "30.0.3"
+    compileSdk 32
 
     defaultConfig {
-        applicationId "adrianolc.appbuilder"
-        minSdkVersion 23
-        targetSdkVersion 32
-        versionCode 1
-        versionName "1.0"
+        minSdk 23
+        targetSdk 32
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -23,25 +20,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
-    buildFeatures {
-        viewBinding = true
-    }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
-    implementation project(':initializer')
     implementation project(':domain')
-
     implementation project(':feature-branches:api')
-    implementation project(':feature-branches:impl')
-
-    implementation libraries.kotlin
+    implementation project(':remote:api')
 
     implementation libraries.koin_core
     implementation libraries.koin_viewmodel
@@ -58,5 +53,4 @@ dependencies {
     testImplementation test_libraries.junit
     androidTestImplementation test_libraries.androidx_test_ext
     androidTestImplementation test_libraries.espresso
-
 }
