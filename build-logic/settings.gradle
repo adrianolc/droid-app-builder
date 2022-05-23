@@ -1,5 +1,9 @@
 
 dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+    }
     versionCatalogs {
         libs {
             from(files("../gradle/libs.versions.toml"))
@@ -7,4 +11,4 @@ dependencyResolutionManagement {
     }
 }
 
-include(':convention')
+include ':convention'

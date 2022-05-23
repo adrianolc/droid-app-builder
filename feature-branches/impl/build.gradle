@@ -21,8 +21,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -38,19 +38,19 @@ dependencies {
     implementation project(':feature-branches:api')
     implementation project(':remote:api')
 
-    implementation libraries.koin_core
-    implementation libraries.koin_viewmodel
+    implementation libs.koin.core
+    implementation libs.koin.android
 
-    implementation libraries.androidx_core
-    implementation libraries.androidx_appcompat
-    implementation libraries.androidx_layout
-    implementation libraries.androix_viewmodel
-    implementation libraries.androidx_lifecycle
-    implementation libraries.androidx_liveData
+    implementation libs.androidx.core
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.layout
+    implementation libs.androix.viewmodel
+    implementation libs.androidx.lifecycle
+    implementation libs.androidx.liveData
 
-    implementation libraries.google_material
+    implementation libs.google.material
 
-    testImplementation test_libraries.junit
-    androidTestImplementation test_libraries.androidx_test_ext
-    androidTestImplementation test_libraries.espresso
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.test.ext
+    androidTestImplementation libs.espresso
 }

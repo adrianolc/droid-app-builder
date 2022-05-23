@@ -1,15 +1,11 @@
-apply from: "$rootProject.projectDir/dependencies.gradle"
 apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    implementation libraries.koin_core
+    implementation libs.koin.core
 
-    api libraries.retrofit
-    api libraries.converter_moshi
+    api libs.retrofit
+    api libs.converter.moshi
 
-    implementation libraries.logging_interceptor
+    implementation libs.logging.interceptor
 }
-
-sourceCompatibility = "1.8"
-targetCompatibility = "1.8"

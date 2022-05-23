@@ -1,4 +1,3 @@
-apply from: "$rootProject.projectDir/dependencies.gradle"
 apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
@@ -7,12 +6,12 @@ dependencies {
     implementation project(':network')
     implementation project(':remote:api')
 
-    implementation libraries.koin_core
+    implementation libs.koin.core
 
-    implementation libraries.retrofit
-    implementation libraries.converter_moshi
+    implementation libs.retrofit
+    implementation libs.converter.moshi
 
-    implementation libraries.logging_interceptor
+    implementation libs.logging.interceptor
 }
 
 sourceCompatibility = "1.8"

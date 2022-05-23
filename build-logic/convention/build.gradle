@@ -1,13 +1,11 @@
 plugins {
-    id 'kotlin'
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    id 'java-library'
 }
 
 dependencies {
-    implementation(libs.android.gradlePlugin)
-    implementation(libs.kotlin.gradlePlugin)
+    implementation libs.android.gradle.plugin
+    implementation libs.kotlin.gradle.plugin
 }
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11

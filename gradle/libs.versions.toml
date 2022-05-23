@@ -1,6 +1,7 @@
 [versions]
 android-gradle-plugin = "7.2.0"
-koin = '2.2.2'
+kotlin = "1.6.21"
+koin = '3.2.0'
 coroutines = "1.6.1"
 androidx = "1.1.0"
 layout = "2.1.4"
@@ -15,31 +16,30 @@ converter= "2.9.0"
 logging = "3.1.0"
 
 [libraries]
-# { group = "XXX", name = "XXX", versions.ref = "XXX" }
+# { group = "XXX", name = "XXX", version.ref = "XXX" }
 
-android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", versions.ref = "gradle" }
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "android-gradle-plugin" }
 
-kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", versions.ref = "kotlin" }
-kotlin-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", versions.ref = "coroutines" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 
-koin-core = { group = "org.koin", name = "koin-core", versions.ref = "koin" }
-koin-android = { group = "org.koin", name = "koin-android", versions.ref = "koin" }
-koin-viewmodel = { group = "org.koin", name = "koin-android-viewmodel", versions.ref = "koin"}
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 
-androidx-core = { group = "androidx.core", name = "core-ktx", versions.ref = "androidx" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", versions.ref = "androidx" }
-androidx-layout = { group = "androidx.constraintlayout", name = "constraintlayout", versions.ref = "layout" }
-androix-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", versions.ref = "lifecycle" }
-androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", versions.ref = "lifecycle" }
-androidx-liveData = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", versions.ref = "lifecycle" }
+androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "androidx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx" }
+androidx-layout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "layout" }
+androix-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-liveData = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
 
-google-material = { group = "com.google.android.material", name = "material", versions.ref = "material" }
+google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", versions.ref = "retrofit" }
-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", versions.ref = "converter" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "converter" }
 
-logging-interceptor = { group = "com.github.ihsanbal", name = "LoggingInterceptor", versions.ref = "logging" }
+logging-interceptor = { group = "com.github.ihsanbal", name = "LoggingInterceptor", version.ref = "logging" }
 
-junit = { group = "junit", name = "junit", versions.ref = "junit" }
-androidx-test-ext = { group = "androidx.test.ext", name = "junit", versions.ref = "test-ext" }
-espresso = { group = "androidx.test.espresso", name = "espresso-core", versions.ref = "espresso" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext = { group = "androidx.test.ext", name = "junit", version.ref = "test-ext" }
+espresso = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
