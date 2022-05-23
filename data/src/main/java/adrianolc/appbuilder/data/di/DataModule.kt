@@ -1,14 +1,15 @@
 package adrianolc.appbuilder.data.di
 
-import adrianolc.appbuilder.data.repository.BranchRepositoryDataSource
+import adrianolc.appbuilder.data.remote.service.BranchService
+import adrianolc.appbuilder.data.repository.BranchDataSource
 import adrianolc.appbuilder.data.repository.TagRepositoryImpl
-import adrianolc.appbuilder.domain.repository.BranchRepository
 import adrianolc.appbuilder.domain.repository.TagRepository
 import org.koin.dsl.module
+import retrofit2.Retrofit
 
 private val repositories = module {
     single {
-        BranchRepositoryDataSource(get())
+        BranchDataSource(get())
     }
 
     single<TagRepository> {
@@ -16,6 +17,13 @@ private val repositories = module {
     }
 }
 
+private val serviceModule = module {
+    factory<BranchService> {
+        get<Retrofit>().create(BranchService::class.java)
+    }
+}
+
 val dataModules = listOf(
-    repositories
+    repositories,
+    serviceModule
 )

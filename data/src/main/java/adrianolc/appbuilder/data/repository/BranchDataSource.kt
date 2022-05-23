@@ -5,7 +5,7 @@ import adrianolc.appbuilder.data.remote.service.BranchService
 import adrianolc.appbuilder.domain.model.Branch
 import adrianolc.appbuilder.domain.repository.BranchRepository
 
-class BranchRepositoryDataSource(
+class BranchDataSource(
     private val service: BranchService
 ) {
 
