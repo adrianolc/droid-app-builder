@@ -28,6 +28,7 @@ dependencies {
     implementation project(':domain')
     implementation project(':data')
     implementation project(':network')
+    implementation project(':remote:impl')
 
     implementation libraries.kotlin
 

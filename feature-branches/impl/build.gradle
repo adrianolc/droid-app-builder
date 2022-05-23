@@ -35,8 +35,8 @@ android {
 
 dependencies {
     implementation project(':domain')
-    implementation project(':data')
     implementation project(':feature-branches:api')
+    implementation project(':remote:api')
 
     implementation libraries.koin_core
     implementation libraries.koin_viewmodel
