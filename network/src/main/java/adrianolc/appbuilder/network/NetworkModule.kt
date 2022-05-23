@@ -1,6 +1,5 @@
-package adrianolc.appbuilder.data.di
+package adrianolc.appbuilder.network
 
-import adrianolc.appbuilder.data.remote.service.BranchService
 import com.ihsanbal.logging.Level
 import com.ihsanbal.logging.LoggingInterceptor
 import okhttp3.OkHttpClient
@@ -9,7 +8,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-internal val network = module {
+val networkModule = module {
     factory {
         okHttpClient()
     }
@@ -17,14 +16,6 @@ internal val network = module {
     single {
         retrofit(get())
     }
-
-    factory {
-        branchService(get())
-    }
-}
-
-private fun branchService(retrofit: Retrofit): BranchService {
-    return retrofit.create(BranchService::class.java)
 }
 
 private fun retrofit(httpClient: OkHttpClient): Retrofit {

@@ -17,6 +17,5 @@ private val repositories = module {
 }
 
 val dataModules = listOf(
-    repositories,
-    network
+    repositories
 )
