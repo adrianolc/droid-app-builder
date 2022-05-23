@@ -1,8 +1,10 @@
+rootProject.name = "App Builder"
+
 include ':model'
 include ':initializer'
 include ':data'
 include ':domain'
 include ':app'
-rootProject.name = "App Builder"
-include ':feature-repo:impl'
-include ':feature-repo:api'
+
+include ':feature-branches:impl'
+include ':feature-branches:api'

@@ -38,8 +38,8 @@ dependencies {
     implementation project(':initializer')
     implementation project(':domain')
 
-    implementation project(':feature-repo:api')
-    implementation project(':feature-repo:impl')
+    implementation project(':feature-branches:api')
+    implementation project(':feature-branches:impl')
 
     implementation libraries.kotlin
 
