@@ -3,7 +3,7 @@ package adrianolc.appbuilder.feature_repo.impl.ui
 import adrianolc.appbuilder.feature_repo.impl.databinding.ListActivityBinding
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ListActivity : AppCompatActivity() {
 

@@ -1,13 +1,11 @@
-apply from: "$rootProject.projectDir/dependencies.gradle"
 apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    implementation libraries.kotlin
-    implementation libraries.kotlin_coroutines
+    implementation libs.kotlin.coroutines
 
-    implementation libraries.koin_core
+    implementation libs.koin.core
 }
 
-sourceCompatibility = "1.8"
-targetCompatibility = "1.8"
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11

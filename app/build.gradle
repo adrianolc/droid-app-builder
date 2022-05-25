@@ -1,7 +1,6 @@
-apply from: "$rootProject.projectDir/dependencies.gradle"
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-parcelize'
 
 android {
     compileSdkVersion 32
@@ -41,22 +40,20 @@ dependencies {
     implementation project(':feature-branches:api')
     implementation project(':feature-branches:impl')
 
-    implementation libraries.kotlin
+    implementation libs.koin.core
+    implementation libs.koin.android
 
-    implementation libraries.koin_core
-    implementation libraries.koin_viewmodel
+    implementation libs.androidx.core
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.layout
+    implementation libs.androix.viewmodel
+    implementation libs.androidx.lifecycle
+    implementation libs.androidx.liveData
 
-    implementation libraries.androidx_core
-    implementation libraries.androidx_appcompat
-    implementation libraries.androidx_layout
-    implementation libraries.androix_viewmodel
-    implementation libraries.androidx_lifecycle
-    implementation libraries.androidx_liveData
+    implementation libs.google.material
 
-    implementation libraries.google_material
-
-    testImplementation test_libraries.junit
-    androidTestImplementation test_libraries.androidx_test_ext
-    androidTestImplementation test_libraries.espresso
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.test.ext
+    androidTestImplementation libs.espresso
 
 }
