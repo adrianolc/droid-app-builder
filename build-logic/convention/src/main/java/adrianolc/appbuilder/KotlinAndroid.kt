@@ -2,11 +2,10 @@ package adrianolc.appbuilder
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion
-import org.gradle.api.Project
 import org.gradle.api.plugins.ExtensionAware
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 
-fun Project.configureKotlinAndroid(
+fun configureKotlinAndroid(
     commonExtension: CommonExtension<*, *, *, *>
 ) {
     commonExtension.apply {
@@ -14,6 +13,8 @@ fun Project.configureKotlinAndroid(
 
         defaultConfig {
             minSdk = 23
+
+            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
 
         compileOptions {

@@ -3,16 +3,11 @@ plugins {
 }
 
 android {
-    compileSdk = 32
-    buildToolsVersion = "30.0.3"
-
     defaultConfig {
         applicationId = "adrianolc.appbuilder"
 
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -24,11 +19,6 @@ android {
 
     buildFeatures {
         viewBinding = true
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 
