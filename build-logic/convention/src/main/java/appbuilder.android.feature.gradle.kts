@@ -16,8 +16,8 @@ android {
 val libs: VersionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
 dependencies {
-    implementation(project(":domain"))
-    implementation(project(":remote:api"))
+    implementation(project(":core-domain"))
+    implementation(project(":core-remote:api"))
 
     implementation(libs.findLibrary("koin.core").get())
     implementation(libs.findLibrary("koin.android").get())
