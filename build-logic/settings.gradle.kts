@@ -1,3 +1,4 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 dependencyResolutionManagement {
     repositories {
@@ -5,10 +6,10 @@ dependencyResolutionManagement {
         mavenCentral()
     }
     versionCatalogs {
-        libs {
+        create("libs") {
             from(files("../gradle/libs.versions.toml"))
         }
     }
 }
 
-include ':convention'
+include(":convention")
