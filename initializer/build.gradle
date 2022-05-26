@@ -24,10 +24,10 @@ android {
 }
 
 dependencies {
-    implementation project(':domain')
+    implementation project(':core-domain')
     implementation project(':data')
-    implementation project(':network')
-    implementation project(':remote:impl')
+    implementation project(':core-network')
+    implementation project(':core-remote:impl')
 
     implementation libs.koin.android
 }
