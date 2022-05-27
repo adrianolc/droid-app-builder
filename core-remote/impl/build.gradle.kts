@@ -1,5 +1,6 @@
 plugins {
     id("appbuilder.android.library")
+    id("dagger.hilt.android.plugin")
 }
 
 dependencies {

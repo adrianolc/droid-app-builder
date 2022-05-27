@@ -1,5 +1,6 @@
 plugins {
     id("appbuilder.android.feature")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
