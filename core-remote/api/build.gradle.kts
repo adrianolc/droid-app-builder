@@ -4,7 +4,7 @@ plugins {
 
 dependencies {
     implementation(project(":core-domain"))
-    api(project(":core-network"))
+    implementation(project(":core-network"))
 
     implementation(libs.retrofit)
     implementation(libs.converter.moshi)
