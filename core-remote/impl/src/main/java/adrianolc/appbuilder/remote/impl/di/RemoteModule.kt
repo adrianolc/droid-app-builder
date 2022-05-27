@@ -13,18 +13,15 @@ import retrofit2.create
 
 @Module
 @InstallIn(SingletonComponent::class)
-object RemoteProvider {
-
-    @Provides
-    fun provideBranchService(retrofit: Retrofit): BranchService {
-        return retrofit.create()
-    }
-}
-
-@Module
-@InstallIn(SingletonComponent::class)
-abstract class RemoteBinder {
+abstract class RemoteModule {
     @Binds
     abstract fun bindBranchDataSource(branchDataSourceImpl: BranchDataSourceImpl): BranchDataSource
+
+    companion object {
+        @Provides
+        fun provideBranchService(retrofit: Retrofit): BranchService {
+            return retrofit.create()
+        }
+    }
 }
 
