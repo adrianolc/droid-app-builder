@@ -30,9 +30,6 @@ dependencies {
     implementation(project(":feature-branches:api"))
     implementation(project(":feature-branches:impl"))
 
-    implementation(libs.koin.core)
-    implementation(libs.koin.android)
-
     implementation(libs.androidx.core)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.layout)
