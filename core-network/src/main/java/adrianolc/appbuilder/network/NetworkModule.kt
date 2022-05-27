@@ -27,15 +27,14 @@ object NetworkModule {
     }
 
     @Provides
-    fun provideOkHttpClient(loggingInterceptor: LoggingInterceptor): OkHttpClient {
+    fun provideOkHttpClient(): OkHttpClient {
         return OkHttpClient()
             .newBuilder()
-            .addInterceptor(loggingInterceptor)
+            .addInterceptor(provideLoggingInterceptor())
             .build()
     }
 
-    @Provides
-    fun provideLoggingInterceptor(): LoggingInterceptor {
+    private fun provideLoggingInterceptor(): LoggingInterceptor {
         return LoggingInterceptor.Builder()
             .setLevel(Level.BASIC)
             .log(Platform.INFO)

@@ -27,7 +27,6 @@ dependencies {
     implementation project(':core-domain')
     implementation project(':data')
     implementation project(':core-network')
-    implementation project(':core-remote:impl')
 
     implementation libs.koin.android
 }

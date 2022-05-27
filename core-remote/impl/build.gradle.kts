@@ -5,7 +5,7 @@ plugins {
 
 dependencies {
     implementation(project(":core-domain"))
-    implementation(project(":core-remote:api"))
+    api(project(":core-remote:api"))
 
     implementation(libs.koin.core)
 

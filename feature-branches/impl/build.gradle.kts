@@ -21,5 +21,5 @@ android {
 }
 
 dependencies {
-    implementation(project(":feature-branches:api"))
+    api(project(":feature-branches:api"))
 }

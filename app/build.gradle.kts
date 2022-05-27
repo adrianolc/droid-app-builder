@@ -27,7 +27,7 @@ dependencies {
     implementation(project(":initializer"))
     implementation(project(":core-domain"))
 
-    implementation(project(":feature-branches:api"))
+    implementation(project(":feature-branches:impl"))
 
     implementation(libs.androidx.core)
     implementation(libs.androidx.appcompat)
