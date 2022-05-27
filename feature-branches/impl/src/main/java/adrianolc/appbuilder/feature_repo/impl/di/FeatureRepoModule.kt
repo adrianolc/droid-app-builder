@@ -4,25 +4,16 @@ import adrianolc.appbuilder.feature_repo.api.FeatureRepoNavigation
 import adrianolc.appbuilder.feature_repo.impl.FeatureRepoNavigationImpl
 import adrianolc.appbuilder.feature_repo.impl.domain.use_case.LoadBranchesUseCase
 import adrianolc.appbuilder.feature_repo.impl.ui.ListViewModel
+import dagger.Binds
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ActivityComponent
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
-private val viewModels = module {
-    viewModel { ListViewModel(get()) }
+@Module
+@InstallIn(ActivityComponent::class)
+interface FeatureRepoModule {
+    @Binds
+    fun bindFeatureRepoNavigation(navigationImpl: FeatureRepoNavigationImpl): FeatureRepoNavigation
 }
-
-private val navigation = module {
-    factory<FeatureRepoNavigation> { FeatureRepoNavigationImpl() }
-}
-
-private val useCases = module {
-    factory {
-        LoadBranchesUseCase(get(), get())
-    }
-}
-
-val featureRepoModule = listOf(
-    viewModels,
-    navigation,
-    useCases
-)

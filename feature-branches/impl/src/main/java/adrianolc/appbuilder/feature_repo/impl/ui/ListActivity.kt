@@ -2,16 +2,19 @@ package adrianolc.appbuilder.feature_repo.impl.ui
 
 import adrianolc.appbuilder.feature_repo.impl.databinding.ListActivityBinding
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import dagger.hilt.android.AndroidEntryPoint
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@AndroidEntryPoint
 class ListActivity : AppCompatActivity() {
 
     private val binding: ListActivityBinding by lazy {
         ListActivityBinding.inflate(layoutInflater)
     }
 
-    private val viewModel: ListViewModel by viewModel()
+    private val viewModel: ListViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
