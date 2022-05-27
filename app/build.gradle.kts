@@ -1,5 +1,6 @@
 plugins {
     id("appbuilder.android.application")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -23,14 +24,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":initializer"))
-    implementation(project(":core-domain"))
-
-    implementation(project(":feature-branches:api"))
     implementation(project(":feature-branches:impl"))
-
-    implementation(libs.koin.core)
-    implementation(libs.koin.android)
 
     implementation(libs.androidx.core)
     implementation(libs.androidx.appcompat)

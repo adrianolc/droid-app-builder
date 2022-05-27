@@ -1,5 +1,6 @@
 plugins {
     id("appbuilder.android.feature")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -20,5 +21,5 @@ android {
 }
 
 dependencies {
-    implementation(project(":feature-branches:api"))
+    api(project(":feature-branches:api"))
 }

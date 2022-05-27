@@ -4,13 +4,16 @@ import adrianolc.appbuilder.feature_repo.api.FeatureRepoNavigation
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import org.koin.android.ext.android.inject
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class SplashScreenActivity : AppCompatActivity() {
 
-    private val navigation: FeatureRepoNavigation by inject()
+    @Inject
+    lateinit var navigation: FeatureRepoNavigation
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

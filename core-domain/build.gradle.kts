@@ -4,6 +4,4 @@ plugins {
 
 dependencies {
     implementation(libs.kotlin.coroutines)
-
-    implementation(libs.koin.core)
 }
