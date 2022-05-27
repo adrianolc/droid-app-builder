@@ -24,9 +24,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":initializer"))
-    implementation(project(":core-domain"))
-
     implementation(project(":feature-branches:impl"))
 
     implementation(libs.androidx.core)
