@@ -3,6 +3,7 @@ import adrianolc.appbuilder.configureKotlinAndroid
 plugins {
     id("com.android.library")
     kotlin("android")
+    kotlin("kapt")
 }
 
 android {
@@ -13,6 +14,10 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 val libs: VersionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
 dependencies {
@@ -21,6 +26,9 @@ dependencies {
 
     implementation(libs.findLibrary("koin.core").get())
     implementation(libs.findLibrary("koin.android").get())
+
+    implementation(libs.findLibrary("hilt-android").get())
+    kapt(libs.findLibrary("hilt-compiler").get())
 
     implementation(libs.findLibrary("androidx.core").get())
     implementation(libs.findLibrary("androidx.appcompat").get())
