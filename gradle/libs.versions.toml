@@ -14,6 +14,7 @@ fuel = "2.3.0"
 retrofit = "2.9.0"
 converter= "2.9.0"
 logging = "3.1.0"
+hilt = "2.38.1"
 
 [libraries]
 # { group = "XXX", name = "XXX", version.ref = "XXX" }
@@ -43,3 +44,7 @@ logging-interceptor = { group = "com.github.ihsanbal", name = "LoggingIntercepto
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext = { group = "androidx.test.ext", name = "junit", version.ref = "test-ext" }
 espresso = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+
+hilt-gradle-plugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hilt" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
