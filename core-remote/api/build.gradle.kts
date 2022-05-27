@@ -1,5 +1,5 @@
 plugins {
-    id("appbuilder.java.library")
+    id("appbuilder.android.library")
 }
 
 dependencies {

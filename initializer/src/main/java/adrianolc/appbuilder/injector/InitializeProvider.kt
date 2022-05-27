@@ -2,7 +2,6 @@ package adrianolc.appbuilder.injector
 
 import adrianolc.appbuilder.data.di.dataModules
 import adrianolc.appbuilder.domain.di.domainModules
-import adrianolc.appbuilder.network.networkModule
 import adrianolc.appbuilder.remote.impl.di.remoteModule
 import android.app.Application
 import android.content.ContentProvider
@@ -24,7 +23,6 @@ class InitializeProvider : ContentProvider() {
 
             modules(domainModules)
             modules(dataModules)
-            modules(networkModule)
             modules(remoteModule)
         }
 
