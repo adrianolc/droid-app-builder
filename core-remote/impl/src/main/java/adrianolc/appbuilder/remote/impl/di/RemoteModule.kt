@@ -3,22 +3,28 @@ package adrianolc.appbuilder.remote.impl.di
 import adrianolc.appbuilder.remote.api.data_source.BranchDataSource
 import adrianolc.appbuilder.remote.api.service.BranchService
 import adrianolc.appbuilder.remote.impl.data_source.BranchDataSourceImpl
-import org.koin.dsl.module
+import dagger.Binds
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
+import retrofit2.create
 
-private val dataSourceModule = module {
-    single<BranchDataSource> {
-        BranchDataSourceImpl(get())
+@Module
+@InstallIn(SingletonComponent::class)
+object RemoteProvider {
+
+    @Provides
+    fun provideBranchService(retrofit: Retrofit): BranchService {
+        return retrofit.create()
     }
 }
 
-private val serviceModule = module {
-    factory<BranchService> {
-        get<Retrofit>().create(BranchService::class.java)
-    }
+@Module
+@InstallIn(SingletonComponent::class)
+abstract class RemoteBinder {
+    @Binds
+    abstract fun bindBranchDataSource(branchDataSourceImpl: BranchDataSourceImpl): BranchDataSource
 }
 
-val remoteModule = listOf(
-    dataSourceModule,
-    serviceModule
-)

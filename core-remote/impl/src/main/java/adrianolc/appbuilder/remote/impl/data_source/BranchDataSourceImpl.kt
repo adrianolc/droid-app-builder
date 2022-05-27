@@ -4,8 +4,11 @@ import adrianolc.appbuilder.domain.model.Branch
 import adrianolc.appbuilder.remote.api.data_source.BranchDataSource
 import adrianolc.appbuilder.remote.api.service.BranchService
 import adrianolc.appbuilder.remote.impl.mapper.toModel
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class BranchDataSourceImpl(
+@Singleton
+class BranchDataSourceImpl @Inject constructor(
     private val service: BranchService
 ) : BranchDataSource {
     override suspend fun loadBranches(page: Int): List<Branch> {
