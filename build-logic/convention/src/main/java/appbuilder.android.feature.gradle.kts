@@ -24,9 +24,6 @@ dependencies {
     implementation(project(":core-domain"))
     api(project(":core-remote:impl"))
 
-    implementation(libs.findLibrary("koin.core").get())
-    implementation(libs.findLibrary("koin.android").get())
-
     implementation(libs.findLibrary("hilt-android").get())
     kapt(libs.findLibrary("hilt-compiler").get())
 
@@ -36,6 +33,7 @@ dependencies {
     implementation(libs.findLibrary("androix.viewmodel").get())
     implementation(libs.findLibrary("androidx.lifecycle").get())
     implementation(libs.findLibrary("androidx.liveData").get())
+    implementation(libs.findLibrary("androidx-activity").get())
 
     implementation(libs.findLibrary("google.material").get())
 
