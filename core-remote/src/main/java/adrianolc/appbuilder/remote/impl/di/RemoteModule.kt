@@ -13,7 +13,7 @@ import retrofit2.create
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class RemoteModule {
+internal abstract class RemoteModule {
     @Binds
     abstract fun bindBranchDataSource(branchDataSourceImpl: BranchDataSourceImpl): BranchDataSource
 

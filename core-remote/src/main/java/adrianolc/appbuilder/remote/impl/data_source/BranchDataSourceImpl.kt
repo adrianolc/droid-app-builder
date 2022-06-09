@@ -8,7 +8,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class BranchDataSourceImpl @Inject constructor(
+internal class BranchDataSourceImpl @Inject constructor(
     private val service: BranchService
 ) : BranchDataSource {
     override suspend fun loadBranches(page: Int): List<Branch> {
