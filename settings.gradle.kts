@@ -26,8 +26,5 @@ include(":core-domain")
 include(":core-network")
 include(":core-remote")
 
-include(":feature-branches")
-
-include(":model")
-include(":initializer")
-include(":data")
+include(":feature-branches:impl")
+include(":feature-branches:api")
