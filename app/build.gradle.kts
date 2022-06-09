@@ -28,7 +28,7 @@ hilt {
 }
 
 dependencies {
-    implementation(project(":feature-branches:impl"))
+    implementation(project(":feature-branches"))
 
     implementation(libs.androidx.core)
     implementation(libs.androidx.appcompat)
