@@ -20,13 +20,14 @@ dependencyResolutionManagement {
 
 rootProject.name = "AppBuilder"
 
+include(":app")
+
+include(":core-domain")
+include(":core-network")
+include(":core-remote")
+
+include(":feature-branches")
+
 include(":model")
 include(":initializer")
 include(":data")
-include(":core-domain")
-include(":app")
-
-include(":feature-branches:impl")
-include(":feature-branches:api")
-include(":core-network")
-include(":core-remote")
