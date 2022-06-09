@@ -22,7 +22,7 @@ val libs: VersionCatalog = extensions.getByType<VersionCatalogsExtension>().name
 
 dependencies {
     implementation(project(":core-domain"))
-    implementation(project(":core-remote:impl"))
+    implementation(project(":core-remote"))
 
     implementation(libs.findLibrary("hilt-android").get())
     kapt(libs.findLibrary("hilt-compiler").get())
