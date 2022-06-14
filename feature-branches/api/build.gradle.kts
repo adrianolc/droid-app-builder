@@ -1,6 +1,5 @@
 plugins {
-    id("appbuilder.android.feature")
-    id("dagger.hilt.android.plugin")
+    id("appbuilder.android.library")
 }
 
 android {
@@ -13,9 +12,5 @@ android {
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
-    }
-    
-    buildFeatures {
-        viewBinding = true
     }
 }
