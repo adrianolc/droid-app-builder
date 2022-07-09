@@ -14,9 +14,7 @@
         android:usesCleartextTraffic="true">
 
         <activity
-            android:name=".app.feature.splash_screen.SplashScreenActivity"
-            android:theme="@style/AppTheme.SplashScreen"
-            android:noHistory="true"
+            android:name=".app.MainActivity"
             android:exported="true">
 
             <intent-filter>

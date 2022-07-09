@@ -37,10 +37,12 @@ dependencies {
     implementation(libs.androidx.lifecycle)
     implementation(libs.androidx.liveData)
 
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+
     implementation(libs.google.material)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext)
     androidTestImplementation(libs.espresso)
-
 }

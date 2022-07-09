@@ -34,6 +34,9 @@ dependencies {
     implementation(libs.findLibrary("androidx.lifecycle").get())
     implementation(libs.findLibrary("androidx.liveData").get())
     implementation(libs.findLibrary("androidx-activity").get())
+    implementation(libs.findLibrary("androidx-fragment").get())
+    implementation(libs.findLibrary("androidx-navigation-fragment").get())
+    implementation(libs.findLibrary("androidx-navigation-ui").get())
 
     implementation(libs.findLibrary("google.material").get())
 
