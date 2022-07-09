@@ -1,4 +1,4 @@
-package adrianolc.appbuilder.app.feature.splash_screen
+package adrianolc.appbuilder.app
 
 import adrianolc.appbuilder.feature_repo.api.FeatureRepoNavigation
 import android.os.Bundle
@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class SplashScreenActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var navigation: FeatureRepoNavigation
@@ -22,7 +22,7 @@ class SplashScreenActivity : AppCompatActivity() {
             delay(1000)
 
             startActivity(
-                navigation.newIntent(this@SplashScreenActivity)
+                navigation.newIntent(this@MainActivity)
             )
         }
     }
