@@ -16,6 +16,7 @@ logging = "3.1.0"
 hilt = "2.38.1"
 activity = "1.4.0"
 fragment = "1.5.0"
+navigation = "2.5.0"
 
 [libraries]
 # { group = "XXX", name = "XXX", version.ref = "XXX" }
@@ -34,6 +35,9 @@ androidx-liveData = { group = "androidx.lifecycle", name = "lifecycle-livedata-k
 
 androidx-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
 androidx-fragment = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment" }
+
+androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
 
 google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
