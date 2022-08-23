@@ -9,5 +9,8 @@ buildscript {
         classpath(libs.android.gradle.plugin)
         classpath(libs.kotlin.gradle.plugin)
         classpath(libs.hilt.gradle.plugin)
+        classpath("com.vanniktech:gradle-dependency-graph-generator-plugin:0.8.0")
     }
 }
+
+apply(plugin="com.vanniktech.dependency.graph.generator")
