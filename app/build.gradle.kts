@@ -1,6 +1,7 @@
 plugins {
     id("appbuilder.android.application")
     id("dagger.hilt.android.plugin")
+    alias(libs.plugins.module.graph.assertion)
 }
 
 android {
