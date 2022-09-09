@@ -1,0 +1,8 @@
+digraph G {
+":app" -> ":feature-branches:impl" [color=red style=bold]
+":feature-branches:impl" -> ":feature-branches:api"
+":feature-branches:impl" -> ":core-domain"
+":feature-branches:impl" -> ":core-remote" [color=red style=bold]
+":core-remote" -> ":core-network" [color=red style=bold]
+":core-remote" -> ":core-domain"
+}
