@@ -1,6 +1,6 @@
 [versions]
 android-gradle-plugin = "7.2.0"
-kotlin = "1.6.20"
+kotlin = "1.8.20"
 coroutines = "1.6.4"
 androidx = "1.1.0"
 layout = "2.1.4"
