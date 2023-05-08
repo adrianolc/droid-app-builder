@@ -1,7 +1,7 @@
 [versions]
 android-gradle-plugin = "7.2.0"
 kotlin = "1.8.21"
-coroutines = "1.6.4"
+coroutines = "1.7.0"
 androidx = "1.1.0"
 layout = "2.1.4"
 lifecycle = "2.4.1"
