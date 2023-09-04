@@ -17,7 +17,7 @@ hilt = "2.48"
 activity = "1.4.0"
 fragment = "1.5.0"
 navigation = "2.5.0"
-module-graph = "2.4.1"
+module-graph = "2.5.0"
 
 [libraries]
 # { group = "XXX", name = "XXX", version.ref = "XXX" }
