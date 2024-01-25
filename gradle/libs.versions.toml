@@ -15,7 +15,7 @@ converter= "2.9.0"
 logging = "3.1.0"
 hilt = "2.48.1"
 activity = "1.4.0"
-fragment = "1.5.0"
+fragment = "1.6.2"
 navigation = "2.5.0"
 module-graph = "2.5.0"
 
